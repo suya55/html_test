@@ -2,20 +2,19 @@
     <head>
         <script type="text/javascript">
             //PC, 모바일 구분
-var isMobile = false;
-var filter = "win16|win32|win64|mac";
-if (navigator.platform) {
-	isMobile = filter.indexOf(navigator.platform.toLowerCase()) < 0;
-}
+        var isMobile = false;
+        var filter = "win16|win32|win64|mac";
+        if (navigator.platform) {
+            isMobile = filter.indexOf(navigator.platform.toLowerCase()) < 0;
+        }
 
-function fn_inAppCloseAfter(response, status) {
-	//모바일,PC 구분 창닫기
-	if (isMobile){
-		location.href = "kakaotalk://inappbrowser/close";	
-	}else{
-		window.open("about:blank","_self").close();	
-	}
-}
+        //모바일,PC 구분 창닫기
+        if (isMobile){
+            location.href = "kakaotalk://inappbrowser/close";	
+        }else{
+            window.open("about:blank","_self").close();	
+        }
+
         </script>
     </head>
     <body>
